@@ -5,12 +5,12 @@ import { ProductWithRelations } from "@/types/product";
 
 const MenuItem = ({ item }: { item: ProductWithRelations }) => {
   return (
-    <li>
+    <li className="p-6 rounded-lg text-center group hover:bg-white hover:shadow-md hover:shadow-black/25 transition-all duration-200">
       <div className="relative size-48 mx-auto">
         <Image src={item.image} alt={item.name} className="object-cover" fill />
       </div>
-      <div className="flex items-center justify-between mb-4">
-        <h4 className="font-semibold text-xl my-3">{item.name}</h4>
+      <div className="flex items-center flex-col lg:flex-row justify-between mb-4">
+        <h4 className="text-base md:text-lg font-semibold mt-2 lg:my-3">{item.name}</h4>
         <strong className="text-accent">
           {formatCurrency(item.basePrice)}
         </strong>

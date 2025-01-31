@@ -17,8 +17,8 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex mx-4">
-      {locale === Languages.ARABIC ? (
+    <div className="flex max-lg:w-full">
+      {/* {locale === Languages.ARABIC ? (
         <Button
           variant={"outline"}
           className="hover:text-white "
@@ -34,7 +34,21 @@ const LanguageSwitcher = () => {
         >
           العربية
         </Button>
-      )}
+      )} */}
+      
+      <Button
+        variant={"outline"}
+        className={`hover:text-white !px-8 !rounded-full max-lg:w-full ${
+          locale === Languages.ARABIC && "font-semibold"
+        }`}
+        onClick={() =>
+          switchLanguage(
+            locale === Languages.ARABIC ? Languages.ENGLISH : Languages.ARABIC
+          )
+        }
+      >
+        {locale === Languages.ARABIC ? "English" : "العربية"}
+      </Button>
     </div>
   );
 };

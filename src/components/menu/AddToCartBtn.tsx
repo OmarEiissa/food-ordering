@@ -202,7 +202,7 @@ function Extras({
             <Checkbox
               id={extra.id}
               checked={Boolean(selectedExtras.find((e) => e.id === extra.id))}
-              onClick={() => handleExtra(extra)} // todo fix click event in first checkbox
+              onClick={() => handleExtra(extra)}
             />
             <span>
               {extra.name} ({formatCurrency(extra.price)})
